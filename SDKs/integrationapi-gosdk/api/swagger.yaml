@@ -1,0 +1,1317 @@
+---
+swagger: "2.0"
+info:
+  description: "This is a sample definition of the Oracle WMS Cloud Integration API.\n\
+    \nThe views expressed here are my own and do not necessarily reflect the views\
+    \ of Oracle."
+  version: "1.0"
+  title: "Integration API"
+host: "demo.wms.ocs.oraclecloud.com"
+basePath: "/demo_a9/wms/api"
+schemes:
+- "https"
+consumes:
+- "application/x-www-form-urlencoded"
+produces:
+- "application/xml"
+security:
+- basic: []
+paths:
+  /run_stage_interface/:
+    post:
+      summary: "Run Stage Interface"
+      description: ""
+      operationId: "RunStageInterface"
+      parameters:
+      - name: "async"
+        in: "formData"
+        description: ""
+        required: false
+        type: "boolean"
+        x-exportParamName: "Async"
+        x-optionalDataType: "Bool"
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "CompanyCode"
+      - name: "entity"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "Entity"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "FacilityCode"
+      - name: "file_group_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "FileGroupNbr"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /update_oblpn_tracing_nbr/:
+    post:
+      summary: "Update OBLPN Tracking Number"
+      description: ""
+      operationId: "UpdateOBLPNTrackingNumber"
+      parameters:
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "CompanyCode"
+      - name: "dry_ice_weight"
+        in: "formData"
+        description: ""
+        required: false
+        type: "number"
+        x-exportParamName: "DryIceWeight"
+        x-optionalDataType: "Float32"
+      - name: "estimated_delivery_time"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "EstimatedDeliveryTime"
+        x-optionalDataType: "String"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "FacilityCode"
+      - name: "master_tracking_nbr"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "MasterTrackingNbr"
+        x-optionalDataType: "String"
+      - name: "oblpn_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "OblpnNbr"
+      - name: "rate"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "Rate"
+        x-optionalDataType: "String"
+      - name: "ship_via_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ShipViaCode"
+        x-optionalDataType: "String"
+      - name: "tracking_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "TrackingNbr"
+      - name: "weight"
+        in: "formData"
+        description: ""
+        required: false
+        type: "number"
+        x-exportParamName: "Weight"
+        x-optionalDataType: "Float32"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /run_mhe_stage_interface/:
+    post:
+      summary: "Run MHE Stage Interface"
+      description: ""
+      operationId: "RunMHEStageInterface"
+      parameters:
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "CompanyCode"
+      - name: "entity"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "Entity"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "FacilityCode"
+      - name: "mhe_vendor_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "MheVendorCode"
+      - name: "python_function"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "PythonFunction"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /update_oblpn_dims/:
+    post:
+      summary: "Update OBLPN Dimensions"
+      description: ""
+      operationId: "UpdateOBLPNDimensions"
+      parameters:
+      - name: "calc_vol_flg"
+        in: "formData"
+        description: ""
+        required: true
+        type: "boolean"
+        x-exportParamName: "CalcVolFlg"
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "CompanyCode"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "FacilityCode"
+      - name: "height"
+        in: "formData"
+        description: ""
+        required: true
+        type: "number"
+        x-exportParamName: "Height"
+      - name: "length"
+        in: "formData"
+        description: ""
+        required: true
+        type: "number"
+        x-exportParamName: "Length"
+      - name: "oblpn_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "OblpnNbr"
+      - name: "ship_oblpn"
+        in: "formData"
+        description: ""
+        required: false
+        type: "boolean"
+        x-exportParamName: "ShipOblpn"
+        x-optionalDataType: "Bool"
+      - name: "shipping_location"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ShippingLocation"
+        x-optionalDataType: "String"
+      - name: "volume"
+        in: "formData"
+        description: ""
+        required: false
+        type: "number"
+        x-exportParamName: "Volume"
+        x-optionalDataType: "Float32"
+      - name: "weight"
+        in: "formData"
+        description: ""
+        required: false
+        type: "number"
+        x-exportParamName: "Weight"
+        x-optionalDataType: "Float32"
+      - name: "width"
+        in: "formData"
+        description: ""
+        required: true
+        type: "number"
+        x-exportParamName: "Width"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /ship_oblpn:
+    post:
+      summary: "Ship OBLPN"
+      description: ""
+      operationId: "ShipOBLPN"
+      parameters:
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "CompanyCode"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "FacilityCode"
+      - name: "locn_barcode"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "LocnBarcode"
+      - name: "oblpn_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "OblpnNbr"
+      - name: "output_file_to_generate"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "OutputFileToGenerate"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /init_stage_interface/:
+    post:
+      summary: "Init Stage Interface"
+      description: ""
+      operationId: "InitStageInterface"
+      parameters:
+      - name: "async"
+        in: "formData"
+        description: ""
+        required: false
+        type: "boolean"
+        x-exportParamName: "Async"
+        x-optionalDataType: "Bool"
+      - name: "entity"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "Entity"
+        x-optionalDataType: "String"
+      - name: "flat_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FlatData"
+        x-optionalDataType: "String"
+      - name: "validate_xml"
+        in: "formData"
+        description: ""
+        required: false
+        type: "boolean"
+        x-exportParamName: "ValidateXml"
+        x-optionalDataType: "Bool"
+      - name: "xml_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "XmlData"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /get_next_numbers/:
+    post:
+      summary: "Get Next Numbers"
+      description: ""
+      operationId: "GetNextNumbers"
+      parameters:
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "counter_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "CounterCode"
+      - name: "count"
+        in: "formData"
+        description: ""
+        required: false
+        type: "integer"
+        x-exportParamName: "Count"
+        x-optionalDataType: "Int32"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /get_status/:
+    post:
+      summary: "Get Status"
+      description: ""
+      operationId: "GetStatus"
+      parameters:
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "entity"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "Entity"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      - name: "key"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "Key"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /assign_oblpn_to_load/:
+    post:
+      summary: "Assign OBLPN to Load"
+      description: ""
+      operationId: "AssignOBLPNtoLoad"
+      parameters:
+      - name: "carrier_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CarrierCode"
+        x-optionalDataType: "String"
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "delimiter"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "Delimiter"
+        x-optionalDataType: "String"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      - name: "load_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "LoadNbr"
+      - name: "oblpn_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "OblpnNbr"
+      - name: "reassign_load_flg"
+        in: "formData"
+        description: ""
+        required: false
+        type: "boolean"
+        x-exportParamName: "ReassignLoadFlg"
+        x-optionalDataType: "Bool"
+      - name: "require_specific_oblpn_status"
+        in: "formData"
+        description: ""
+        required: false
+        type: "integer"
+        x-exportParamName: "RequireSpecificOblpnStatus"
+        x-optionalDataType: "Int32"
+      - name: "trailer_nbr"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "TrailerNbr"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /create_lpn/:
+    post:
+      summary: "Create LPN"
+      description: ""
+      operationId: "CreateLPN"
+      parameters:
+      - name: "batch_number"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "BatchNumber"
+        x-optionalDataType: "String"
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "dest_facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "DestFacilityCode"
+        x-optionalDataType: "String"
+      - name: "drop_locn_barcode"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "DropLocnBarcode"
+        x-optionalDataType: "String"
+      - name: "expiry_date"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ExpiryDate"
+        x-optionalDataType: "String"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      - name: "item_alternate_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ItemAlternateCode"
+        x-optionalDataType: "String"
+      - name: "item_barcode"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ItemBarcode"
+        x-optionalDataType: "String"
+      - name: "lock_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "LockCode"
+        x-optionalDataType: "String"
+      - name: "lpn_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "LpnNbr"
+      - name: "lpn_weight"
+        in: "formData"
+        description: ""
+        required: false
+        type: "number"
+        x-exportParamName: "LpnWeight"
+        x-optionalDataType: "Float32"
+      - name: "order_type"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "OrderType"
+        x-optionalDataType: "String"
+      - name: "qty"
+        in: "formData"
+        description: ""
+        required: true
+        type: "integer"
+        x-exportParamName: "Qty"
+      - name: "xdock_lpn_flg"
+        in: "formData"
+        description: ""
+        required: false
+        type: "boolean"
+        x-exportParamName: "XdockLpnFlg"
+        x-optionalDataType: "Bool"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /receive_lpn/:
+    post:
+      summary: "Receive LPN"
+      description: ""
+      operationId: "ReceiveLPN"
+      parameters:
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      - name: "lpn_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "LpnNbr"
+      - name: "rcvd_trailer_nbr"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "RcvdTrailerNbr"
+        x-optionalDataType: "String"
+      - name: "received_ts"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ReceivedTs"
+        x-optionalDataType: "String"
+      - name: "receiving_location"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ReceivingLocation"
+        x-optionalDataType: "String"
+      - name: "xdock_lpn_flg"
+        in: "formData"
+        description: ""
+        required: false
+        type: "boolean"
+        x-exportParamName: "XdockLpnFlg"
+        x-optionalDataType: "Bool"
+      - name: "xml_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "XmlData"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /lock_unlock_lpn/:
+    post:
+      summary: "Lock/Unlock LPN"
+      description: ""
+      operationId: "Lock/UnlockLPN"
+      parameters:
+      - name: "action"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "Action"
+        x-optionalDataType: "String"
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      - name: "lock_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "LockCode"
+        x-optionalDataType: "String"
+      - name: "lpn_nbr"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "LpnNbr"
+        x-optionalDataType: "String"
+      - name: "remove_lock_from_shipment_dtl_flg"
+        in: "formData"
+        description: ""
+        required: false
+        type: "boolean"
+        x-exportParamName: "RemoveLockFromShipmentDtlFlg"
+        x-optionalDataType: "Bool"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /update_output_interface/:
+    post:
+      summary: "Update Output Interface"
+      description: ""
+      operationId: "UpdateOutputInterface"
+      parameters:
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "cust_intl_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CustIntlCode"
+        x-optionalDataType: "String"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      - name: "filename"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "Filename"
+        x-optionalDataType: "String"
+      - name: "interface_type_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "InterfaceTypeCode"
+        x-optionalDataType: "String"
+      - name: "message"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "Message"
+        x-optionalDataType: "String"
+      - name: "run_output_interface_flg"
+        in: "formData"
+        description: ""
+        required: false
+        type: "boolean"
+        x-exportParamName: "RunOutputInterfaceFlg"
+        x-optionalDataType: "Bool"
+      - name: "status_id"
+        in: "formData"
+        description: ""
+        required: false
+        type: "integer"
+        x-exportParamName: "StatusId"
+        x-optionalDataType: "Int32"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /induct_lpn/:
+    post:
+      summary: "Induct LPN"
+      description: ""
+      operationId: "InductLPN"
+      parameters:
+      - name: "flat_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FlatData"
+        x-optionalDataType: "String"
+      - name: "xml_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "XmlData"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /divert_confirm/:
+    post:
+      summary: "Divert Confirm"
+      description: ""
+      operationId: "DivertConfirm"
+      parameters:
+      - name: "flat_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FlatData"
+        x-optionalDataType: "String"
+      - name: "xml_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "XmlData"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /pick_confirm/:
+    post:
+      summary: "Pick Confirm"
+      description: ""
+      operationId: "PickConfirm"
+      parameters:
+      - name: "flat_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FlatData"
+        x-optionalDataType: "String"
+      - name: "xml_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "XmlData"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /extended_property/{entity_name}/{key}/{extended_property}/:
+    get:
+      summary: "Extended Property"
+      description: ""
+      operationId: "ExtendedProperty"
+      parameters:
+      - name: "entity_name"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "EntityName"
+      - name: "extended_property"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "ExtendedProperty"
+      - name: "key"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "Key"
+      - name: "company_code"
+        in: "query"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "facility_code"
+        in: "query"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /assign_and_load_oblpn/:
+    post:
+      summary: "Assign and Load LPN"
+      description: ""
+      operationId: "AssignandLoadLPN"
+      parameters:
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "dock_door_nbr"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "DockDoorNbr"
+        x-optionalDataType: "String"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      - name: "load_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "LoadNbr"
+      - name: "oblpn_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "OblpnNbr"
+      - name: "oblpn_weight"
+        in: "formData"
+        description: ""
+        required: false
+        type: "number"
+        x-exportParamName: "OblpnWeight"
+        x-optionalDataType: "Float32"
+      - name: "pallet_nbr"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "PalletNbr"
+        x-optionalDataType: "String"
+      - name: "trailer_nbr"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "TrailerNbr"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /entity/{entity_name}/{key}/{sequence_number}/:
+    patch:
+      summary: "Entity Update"
+      description: ""
+      operationId: "EntityUpdate"
+      parameters:
+      - name: "entity_name"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "EntityName"
+      - name: "key"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "Key"
+      - name: "sequence_number"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "SequenceNumber"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /entity/{entity}/{key}/:
+    get:
+      summary: "Object Inquiry"
+      description: ""
+      operationId: "ObjectInquiry"
+      parameters:
+      - name: "entity"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "Entity"
+      - name: "key"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "Key"
+      - name: "company_code"
+        in: "query"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "CompanyCode"
+      - name: "facility_code"
+        in: "query"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "FacilityCode"
+      - name: "minimize"
+        in: "query"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "Minimize"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /from_mhe_distribution_pack/:
+    post:
+      summary: "From MHE Distribution Pack"
+      description: ""
+      operationId: "FromMHEDistributionPack"
+      parameters:
+      - name: "xml_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "XmlData"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /from_mhe_distribution_short/:
+    post:
+      summary: "From MHE Distribution Short"
+      description: ""
+      operationId: "FromMHEDistributionShort"
+      parameters:
+      - name: "flat_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FlatData"
+        x-optionalDataType: "String"
+      - name: "xml_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "XmlData"
+        x-optionalDataType: "String"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /update_carrier_lpn_label/:
+    post:
+      summary: "Update Carrier LPN Label"
+      description: ""
+      operationId: "UpdateCarrierLPNLabel"
+      parameters:
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      - name: "label"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "Label"
+      - name: "oblpn_nbr"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "OblpnNbr"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+  /entity/active_inventory/{location_barcode}/:
+    patch:
+      summary: "Update Active Inventory"
+      description: ""
+      operationId: "UpdateActiveInventory"
+      parameters:
+      - name: "location_barcode"
+        in: "path"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "LocationBarcode"
+      - name: "actual_qty"
+        in: "formData"
+        description: ""
+        required: false
+        type: "number"
+        x-exportParamName: "ActualQty"
+        x-optionalDataType: "Float32"
+      - name: "adjustment_qty"
+        in: "formData"
+        description: ""
+        required: false
+        type: "number"
+        x-exportParamName: "AdjustmentQty"
+        x-optionalDataType: "Float32"
+      - name: "batch_number"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "BatchNumber"
+        x-optionalDataType: "String"
+      - name: "company_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "CompanyCode"
+        x-optionalDataType: "String"
+      - name: "expiry_data"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ExpiryData"
+        x-optionalDataType: "String"
+      - name: "facility_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "FacilityCode"
+        x-optionalDataType: "String"
+      - name: "invn_attr_a"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "InvnAttrA"
+        x-optionalDataType: "String"
+      - name: "invn_attr_b"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "InvnAttrB"
+        x-optionalDataType: "String"
+      - name: "invn_attr_c"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "InvnAttrC"
+        x-optionalDataType: "String"
+      - name: "invn_attr_d"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "InvnAttrD"
+        x-optionalDataType: "String"
+      - name: "invn_attr_e"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "InvnAttrE"
+        x-optionalDataType: "String"
+      - name: "invn_attr_f"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "InvnAttrF"
+        x-optionalDataType: "String"
+      - name: "invn_attr_g"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "InvnAttrG"
+        x-optionalDataType: "String"
+      - name: "item_alternate_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ItemAlternateCode"
+        x-optionalDataType: "String"
+      - name: "item_barcode"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ItemBarcode"
+        x-optionalDataType: "String"
+      - name: "item_code"
+        in: "formData"
+        description: ""
+        required: false
+        type: "string"
+        x-exportParamName: "ItemCode"
+        x-optionalDataType: "String"
+      - name: "locn_capacity_check_flg"
+        in: "formData"
+        description: ""
+        required: false
+        type: "boolean"
+        x-exportParamName: "LocnCapacityCheckFlg"
+        x-optionalDataType: "Bool"
+      - name: "reason_code"
+        in: "formData"
+        description: ""
+        required: true
+        type: "string"
+        x-exportParamName: "ReasonCode"
+      responses:
+        "200":
+          description: ""
+          examples:
+            application/xml: ""
+          schema:
+            type: "object"
+securityDefinitions:
+  basic:
+    type: "basic"
+definitions: {}

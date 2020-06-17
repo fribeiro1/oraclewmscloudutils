@@ -1,0 +1,3302 @@
+{
+	"info": {
+		"_postman_id": "3be22e6b-7d19-45a5-8d43-ecede29c08fd",
+		"name": "Integration API",
+		"description": "This is a sample definition of the Oracle WMS Cloud Integration API.\n\nThe views expressed here are my own and do not necessarily reflect the views of Oracle.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "entity",
+			"item": [
+				{
+					"name": "Entity Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/entity/:entity_name/:key/:sequence_number/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"entity",
+								":entity_name",
+								":key",
+								":sequence_number",
+								""
+							],
+							"variable": [
+								{
+									"id": "fa50b901-6d90-472e-8170-6336841f464b",
+									"key": "entity_name",
+									"value": "<string>",
+									"type": "string",
+									"description": "(Required) "
+								},
+								{
+									"id": "51af4047-b7fe-4e12-a73d-b6c43b0e204b",
+									"key": "key",
+									"value": "<string>",
+									"type": "string",
+									"description": "(Required) "
+								},
+								{
+									"id": "b1a1a493-c169-4703-a56f-5322ff0b2baf",
+									"key": "sequence_number",
+									"value": "<string>",
+									"type": "string",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/entity/:entity_name/:key/:sequence_number/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"entity",
+										":entity_name",
+										":key",
+										":sequence_number",
+										""
+									],
+									"variable": [
+										{
+											"key": "entity_name"
+										},
+										{
+											"key": "key"
+										},
+										{
+											"key": "sequence_number"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/xml"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Object Inquiry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/entity/:entity/:key/?company_code=<string>&facility_code=<string>&minimize=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"entity",
+								":entity",
+								":key",
+								""
+							],
+							"query": [
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": "(Required) "
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": "(Required) "
+								},
+								{
+									"key": "minimize",
+									"value": "<string>"
+								}
+							],
+							"variable": [
+								{
+									"id": "4b2f395d-c30a-4cae-8378-7191a5b114ab",
+									"key": "entity",
+									"value": "<string>",
+									"type": "string",
+									"description": "(Required) "
+								},
+								{
+									"id": "806c5426-1704-43b5-972b-a183a5fbf247",
+									"key": "key",
+									"value": "<string>",
+									"type": "string",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/entity/:entity/:key/?company_code=<string>&facility_code=<string>&minimize=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"entity",
+										":entity",
+										":key",
+										""
+									],
+									"query": [
+										{
+											"key": "company_code",
+											"value": "<string>"
+										},
+										{
+											"key": "facility_code",
+											"value": "<string>"
+										},
+										{
+											"key": "minimize",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "entity"
+										},
+										{
+											"key": "key"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/xml"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update Active Inventory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "reason_code",
+									"value": "<string>"
+								},
+								{
+									"key": "actual_qty",
+									"value": "<number>"
+								},
+								{
+									"key": "adjustment_qty",
+									"value": "<number>"
+								},
+								{
+									"key": "batch_number",
+									"value": "<string>"
+								},
+								{
+									"key": "company_code",
+									"value": "<string>"
+								},
+								{
+									"key": "expiry_data",
+									"value": "<string>"
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>"
+								},
+								{
+									"key": "invn_attr_a",
+									"value": "<string>"
+								},
+								{
+									"key": "invn_attr_b",
+									"value": "<string>"
+								},
+								{
+									"key": "invn_attr_c",
+									"value": "<string>"
+								},
+								{
+									"key": "invn_attr_d",
+									"value": "<string>"
+								},
+								{
+									"key": "invn_attr_e",
+									"value": "<string>"
+								},
+								{
+									"key": "invn_attr_f",
+									"value": "<string>"
+								},
+								{
+									"key": "invn_attr_g",
+									"value": "<string>"
+								},
+								{
+									"key": "item_alternate_code",
+									"value": "<string>"
+								},
+								{
+									"key": "item_barcode",
+									"value": "<string>"
+								},
+								{
+									"key": "item_code",
+									"value": "<string>"
+								},
+								{
+									"key": "locn_capacity_check_flg",
+									"value": "<boolean>"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/entity/active_inventory/:location_barcode/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"entity",
+								"active_inventory",
+								":location_barcode",
+								""
+							],
+							"variable": [
+								{
+									"id": "36af721d-8a38-43c0-abd8-de66655dd628",
+									"key": "location_barcode",
+									"value": "<string>",
+									"type": "string",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "reason_code",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "actual_qty",
+											"value": "<number>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "adjustment_qty",
+											"value": "<number>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "batch_number",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "company_code",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "expiry_data",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "facility_code",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "invn_attr_a",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "invn_attr_b",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "invn_attr_c",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "invn_attr_d",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "invn_attr_e",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "invn_attr_f",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "invn_attr_g",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "item_alternate_code",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "item_barcode",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "item_code",
+											"value": "<string>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										},
+										{
+											"key": "locn_capacity_check_flg",
+											"value": "<boolean>",
+											"description": {
+												"content": "",
+												"type": "text/plain"
+											}
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/entity/active_inventory/:location_barcode/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"entity",
+										"active_inventory",
+										":location_barcode",
+										""
+									],
+									"variable": [
+										{
+											"key": "location_barcode"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/xml"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Run Stage Interface",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "entity",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "file_group_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "async",
+							"value": "<boolean>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/run_stage_interface/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"run_stage_interface",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "entity",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "file_group_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "async",
+									"value": "<boolean>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/run_stage_interface/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"run_stage_interface",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Update OBLPN Tracking Number",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "oblpn_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "tracking_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "dry_ice_weight",
+							"value": "<number>"
+						},
+						{
+							"key": "estimated_delivery_time",
+							"value": "<string>"
+						},
+						{
+							"key": "master_tracking_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "rate",
+							"value": "<string>"
+						},
+						{
+							"key": "ship_via_code",
+							"value": "<string>"
+						},
+						{
+							"key": "weight",
+							"value": "<number>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/update_oblpn_tracing_nbr/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"update_oblpn_tracing_nbr",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "oblpn_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "tracking_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "dry_ice_weight",
+									"value": "<number>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "estimated_delivery_time",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "master_tracking_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "rate",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "ship_via_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "weight",
+									"value": "<number>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/update_oblpn_tracing_nbr/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"update_oblpn_tracing_nbr",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Run MHE Stage Interface",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "entity",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "mhe_vendor_code",
+							"value": "<string>"
+						},
+						{
+							"key": "python_function",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/run_mhe_stage_interface/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"run_mhe_stage_interface",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "entity",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "mhe_vendor_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "python_function",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/run_mhe_stage_interface/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"run_mhe_stage_interface",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Update OBLPN Dimensions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "calc_vol_flg",
+							"value": "<boolean>"
+						},
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "height",
+							"value": "<number>"
+						},
+						{
+							"key": "length",
+							"value": "<number>"
+						},
+						{
+							"key": "oblpn_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "width",
+							"value": "<number>"
+						},
+						{
+							"key": "ship_oblpn",
+							"value": "<boolean>"
+						},
+						{
+							"key": "shipping_location",
+							"value": "<string>"
+						},
+						{
+							"key": "volume",
+							"value": "<number>"
+						},
+						{
+							"key": "weight",
+							"value": "<number>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/update_oblpn_dims/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"update_oblpn_dims",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "calc_vol_flg",
+									"value": "<boolean>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "height",
+									"value": "<number>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "length",
+									"value": "<number>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "oblpn_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "width",
+									"value": "<number>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "ship_oblpn",
+									"value": "<boolean>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "shipping_location",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "volume",
+									"value": "<number>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "weight",
+									"value": "<number>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/update_oblpn_dims/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"update_oblpn_dims",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Ship OBLPN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "locn_barcode",
+							"value": "<string>"
+						},
+						{
+							"key": "oblpn_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "output_file_to_generate",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/ship_oblpn",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ship_oblpn"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "locn_barcode",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "oblpn_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "output_file_to_generate",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/ship_oblpn",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ship_oblpn"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Init Stage Interface",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "async",
+							"value": "<boolean>"
+						},
+						{
+							"key": "entity",
+							"value": "<string>"
+						},
+						{
+							"key": "flat_data",
+							"value": "<string>"
+						},
+						{
+							"key": "validate_xml",
+							"value": "<boolean>"
+						},
+						{
+							"key": "xml_data",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/init_stage_interface/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"init_stage_interface",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "async",
+									"value": "<boolean>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "entity",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "flat_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "validate_xml",
+									"value": "<boolean>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "xml_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/init_stage_interface/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"init_stage_interface",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Get Next Numbers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "counter_code",
+							"value": "<string>"
+						},
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "count",
+							"value": "<integer>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/get_next_numbers/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"get_next_numbers",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "counter_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "count",
+									"value": "<integer>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/get_next_numbers/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"get_next_numbers",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Get Status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "entity",
+							"value": "<string>"
+						},
+						{
+							"key": "key",
+							"value": "<string>"
+						},
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/get_status/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"get_status",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "entity",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "key",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/get_status/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"get_status",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Assign OBLPN to Load",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "load_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "oblpn_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "carrier_code",
+							"value": "<string>"
+						},
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "delimiter",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "reassign_load_flg",
+							"value": "<boolean>"
+						},
+						{
+							"key": "require_specific_oblpn_status",
+							"value": "<integer>"
+						},
+						{
+							"key": "trailer_nbr",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/assign_oblpn_to_load/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"assign_oblpn_to_load",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "load_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "oblpn_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "carrier_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "delimiter",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "reassign_load_flg",
+									"value": "<boolean>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "require_specific_oblpn_status",
+									"value": "<integer>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "trailer_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/assign_oblpn_to_load/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"assign_oblpn_to_load",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Create LPN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "lpn_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "qty",
+							"value": "<integer>"
+						},
+						{
+							"key": "batch_number",
+							"value": "<string>"
+						},
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "dest_facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "drop_locn_barcode",
+							"value": "<string>"
+						},
+						{
+							"key": "expiry_date",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "item_alternate_code",
+							"value": "<string>"
+						},
+						{
+							"key": "item_barcode",
+							"value": "<string>"
+						},
+						{
+							"key": "lock_code",
+							"value": "<string>"
+						},
+						{
+							"key": "lpn_weight",
+							"value": "<number>"
+						},
+						{
+							"key": "order_type",
+							"value": "<string>"
+						},
+						{
+							"key": "xdock_lpn_flg",
+							"value": "<boolean>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/create_lpn/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"create_lpn",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "lpn_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "qty",
+									"value": "<integer>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "batch_number",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "dest_facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "drop_locn_barcode",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "expiry_date",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "item_alternate_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "item_barcode",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "lock_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "lpn_weight",
+									"value": "<number>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "order_type",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "xdock_lpn_flg",
+									"value": "<boolean>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/create_lpn/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"create_lpn",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Receive LPN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "lpn_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "rcvd_trailer_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "received_ts",
+							"value": "<string>"
+						},
+						{
+							"key": "receiving_location",
+							"value": "<string>"
+						},
+						{
+							"key": "xdock_lpn_flg",
+							"value": "<boolean>"
+						},
+						{
+							"key": "xml_data",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/receive_lpn/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"receive_lpn",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "lpn_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "rcvd_trailer_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "received_ts",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "receiving_location",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "xdock_lpn_flg",
+									"value": "<boolean>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "xml_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/receive_lpn/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"receive_lpn",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Lock/Unlock LPN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "action",
+							"value": "<string>"
+						},
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "lock_code",
+							"value": "<string>"
+						},
+						{
+							"key": "lpn_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "remove_lock_from_shipment_dtl_flg",
+							"value": "<boolean>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/lock_unlock_lpn/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"lock_unlock_lpn",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "action",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "lock_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "lpn_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "remove_lock_from_shipment_dtl_flg",
+									"value": "<boolean>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/lock_unlock_lpn/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lock_unlock_lpn",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Update Output Interface",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "cust_intl_code",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "filename",
+							"value": "<string>"
+						},
+						{
+							"key": "interface_type_code",
+							"value": "<string>"
+						},
+						{
+							"key": "message",
+							"value": "<string>"
+						},
+						{
+							"key": "run_output_interface_flg",
+							"value": "<boolean>"
+						},
+						{
+							"key": "status_id",
+							"value": "<integer>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/update_output_interface/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"update_output_interface",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "cust_intl_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "filename",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "interface_type_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "message",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "run_output_interface_flg",
+									"value": "<boolean>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "status_id",
+									"value": "<integer>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/update_output_interface/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"update_output_interface",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Induct LPN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "flat_data",
+							"value": "<string>"
+						},
+						{
+							"key": "xml_data",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/induct_lpn/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"induct_lpn",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "flat_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "xml_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/induct_lpn/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"induct_lpn",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Divert Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "flat_data",
+							"value": "<string>"
+						},
+						{
+							"key": "xml_data",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/divert_confirm/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"divert_confirm",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "flat_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "xml_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/divert_confirm/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"divert_confirm",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Pick Confirm",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "flat_data",
+							"value": "<string>"
+						},
+						{
+							"key": "xml_data",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/pick_confirm/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"pick_confirm",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "flat_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "xml_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/pick_confirm/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"pick_confirm",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Extended Property",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/extended_property/:entity_name/:key/:extended_property?company_code=<string>&facility_code=<string>",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"extended_property",
+						":entity_name",
+						":key",
+						":extended_property"
+					],
+					"query": [
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						}
+					],
+					"variable": [
+						{
+							"id": "49c226ee-1040-4d98-9b6e-505829178517",
+							"key": "entity_name",
+							"value": "<string>",
+							"type": "string",
+							"description": "(Required) "
+						},
+						{
+							"id": "ceccfad8-7aa0-4c82-be5f-49fd67c3da1c",
+							"key": "extended_property",
+							"value": "<string>",
+							"type": "string",
+							"description": "(Required) "
+						},
+						{
+							"id": "e2ef7388-1823-49ab-8374-dd2e50afcbbf",
+							"key": "key",
+							"value": "<string>",
+							"type": "string",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/extended_property/:entity_name/:key/:extended_property?company_code=<string>&facility_code=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"extended_property",
+								":entity_name",
+								":key",
+								":extended_property"
+							],
+							"query": [
+								{
+									"key": "company_code",
+									"value": "<string>"
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>"
+								}
+							],
+							"variable": [
+								{
+									"key": "entity_name"
+								},
+								{
+									"key": "key"
+								},
+								{
+									"key": "extended_property"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Assign and Load LPN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "load_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "oblpn_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "dock_door_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						},
+						{
+							"key": "oblpn_weight",
+							"value": "<number>"
+						},
+						{
+							"key": "pallet_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "trailer_nbr",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/assign_and_load_oblpn/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"assign_and_load_oblpn",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "load_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "oblpn_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "dock_door_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "oblpn_weight",
+									"value": "<number>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "pallet_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "trailer_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/assign_and_load_oblpn/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"assign_and_load_oblpn",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "From MHE Distribution Pack",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "xml_data",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/from_mhe_distribution_pack/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"from_mhe_distribution_pack",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "xml_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/from_mhe_distribution_pack/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"from_mhe_distribution_pack",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "From MHE Distribution Short",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "flat_data",
+							"value": "<string>"
+						},
+						{
+							"key": "xml_data",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/from_mhe_distribution_short/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"from_mhe_distribution_short",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "flat_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "xml_data",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/from_mhe_distribution_short/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"from_mhe_distribution_short",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Update Carrier LPN Label",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "label",
+							"value": "<string>"
+						},
+						{
+							"key": "oblpn_nbr",
+							"value": "<string>"
+						},
+						{
+							"key": "company_code",
+							"value": "<string>"
+						},
+						{
+							"key": "facility_code",
+							"value": "<string>"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/update_carrier_lpn_label/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"update_carrier_lpn_label",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "label",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "oblpn_nbr",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "company_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								},
+								{
+									"key": "facility_code",
+									"value": "<string>",
+									"description": {
+										"content": "",
+										"type": "text/plain"
+									}
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/update_carrier_lpn_label/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"update_carrier_lpn_label",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic"
+	},
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

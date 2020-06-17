@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:schemas="https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api/schemas" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Integration API" xml:lang="en">This is a sample definition of the Oracle WMS Cloud Integration API.
+
+The views expressed here are my own and do not necessarily reflect the views of Oracle.</doc>
+  <grammars>
+    <xs:schema xmlns:tns="https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api/schemas" targetNamespace="https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="response" type="xs:anyType" />
+      <xs:element name="response1" type="xs:anyType" />
+      <xs:element name="response2" type="xs:anyType" />
+      <xs:element name="response3" type="xs:anyType" />
+      <xs:element name="response4" type="xs:anyType" />
+      <xs:element name="response5" type="xs:anyType" />
+      <xs:element name="response6" type="xs:anyType" />
+      <xs:element name="response7" type="xs:anyType" />
+      <xs:element name="response8" type="xs:anyType" />
+      <xs:element name="response9" type="xs:anyType" />
+      <xs:element name="response10" type="xs:anyType" />
+      <xs:element name="response11" type="xs:anyType" />
+      <xs:element name="response12" type="xs:anyType" />
+      <xs:element name="response13" type="xs:anyType" />
+      <xs:element name="response14" type="xs:anyType" />
+      <xs:element name="response15" type="xs:anyType" />
+      <xs:element name="response16" type="xs:anyType" />
+      <xs:element name="response17" type="xs:anyType" />
+      <xs:element name="response18" type="xs:anyType" />
+      <xs:element name="response19" type="xs:anyType" />
+      <xs:element name="response20" type="xs:anyType" />
+      <xs:element name="response21" type="xs:anyType" />
+      <xs:element name="response22" type="xs:anyType" />
+      <xs:element name="response23" type="xs:anyType" />
+    </xs:schema>
+  </grammars>
+  <resources base="https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api">
+    <resource id="_run_stage_interface" path="/run_stage_interface/">
+      <method id="RunStageInterface" name="POST">
+        <doc title="RunStageInterface" xml:lang="en">Run Stage Interface</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="async" style="query" type="xsd:boolean" default="">
+              <doc title="async" xml:lang="en" />
+            </param>
+            <param name="company_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="entity" style="query" type="xsd:string" default="" required="true">
+              <doc title="entity" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="file_group_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="file_group_nbr" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_update_oblpn_tracing_nbr" path="/update_oblpn_tracing_nbr/">
+      <method id="UpdateOBLPNTrackingNumber" name="POST">
+        <doc title="UpdateOBLPNTrackingNumber" xml:lang="en">Update OBLPN Tracking Number</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="company_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="dry_ice_weight" style="query" type="xsd:double" default="">
+              <doc title="dry_ice_weight" xml:lang="en" />
+            </param>
+            <param name="estimated_delivery_time" style="query" type="xsd:string" default="">
+              <doc title="estimated_delivery_time" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="master_tracking_nbr" style="query" type="xsd:string" default="">
+              <doc title="master_tracking_nbr" xml:lang="en" />
+            </param>
+            <param name="oblpn_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="oblpn_nbr" xml:lang="en" />
+            </param>
+            <param name="rate" style="query" type="xsd:string" default="">
+              <doc title="rate" xml:lang="en" />
+            </param>
+            <param name="ship_via_code" style="query" type="xsd:string" default="">
+              <doc title="ship_via_code" xml:lang="en" />
+            </param>
+            <param name="tracking_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="tracking_nbr" xml:lang="en" />
+            </param>
+            <param name="weight" style="query" type="xsd:double" default="">
+              <doc title="weight" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response1" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_run_mhe_stage_interface" path="/run_mhe_stage_interface/">
+      <method id="RunMHEStageInterface" name="POST">
+        <doc title="RunMHEStageInterface" xml:lang="en">Run MHE Stage Interface</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="company_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="entity" style="query" type="xsd:string" default="" required="true">
+              <doc title="entity" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="mhe_vendor_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="mhe_vendor_code" xml:lang="en" />
+            </param>
+            <param name="python_function" style="query" type="xsd:string" default="">
+              <doc title="python_function" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response2" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_update_oblpn_dims" path="/update_oblpn_dims/">
+      <method id="UpdateOBLPNDimensions" name="POST">
+        <doc title="UpdateOBLPNDimensions" xml:lang="en">Update OBLPN Dimensions</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="calc_vol_flg" style="query" type="xsd:boolean" default="" required="true">
+              <doc title="calc_vol_flg" xml:lang="en" />
+            </param>
+            <param name="company_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="height" style="query" type="xsd:double" default="" required="true">
+              <doc title="height" xml:lang="en" />
+            </param>
+            <param name="length" style="query" type="xsd:double" default="" required="true">
+              <doc title="length" xml:lang="en" />
+            </param>
+            <param name="oblpn_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="oblpn_nbr" xml:lang="en" />
+            </param>
+            <param name="ship_oblpn" style="query" type="xsd:boolean" default="">
+              <doc title="ship_oblpn" xml:lang="en" />
+            </param>
+            <param name="shipping_location" style="query" type="xsd:string" default="">
+              <doc title="shipping_location" xml:lang="en" />
+            </param>
+            <param name="volume" style="query" type="xsd:double" default="">
+              <doc title="volume" xml:lang="en" />
+            </param>
+            <param name="weight" style="query" type="xsd:double" default="">
+              <doc title="weight" xml:lang="en" />
+            </param>
+            <param name="width" style="query" type="xsd:double" default="" required="true">
+              <doc title="width" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response3" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_ship_oblpn" path="/ship_oblpn">
+      <method id="ShipOBLPN" name="POST">
+        <doc title="ShipOBLPN" xml:lang="en">Ship OBLPN</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="company_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="locn_barcode" style="query" type="xsd:string" default="" required="true">
+              <doc title="locn_barcode" xml:lang="en" />
+            </param>
+            <param name="oblpn_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="oblpn_nbr" xml:lang="en" />
+            </param>
+            <param name="output_file_to_generate" style="query" type="xsd:string" default="">
+              <doc title="output_file_to_generate" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response4" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_init_stage_interface" path="/init_stage_interface/">
+      <method id="InitStageInterface" name="POST">
+        <doc title="InitStageInterface" xml:lang="en">Init Stage Interface</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="async" style="query" type="xsd:boolean" default="">
+              <doc title="async" xml:lang="en" />
+            </param>
+            <param name="entity" style="query" type="xsd:string" default="">
+              <doc title="entity" xml:lang="en" />
+            </param>
+            <param name="flat_data" style="query" type="xsd:string" default="">
+              <doc title="flat_data" xml:lang="en" />
+            </param>
+            <param name="validate_xml" style="query" type="xsd:boolean" default="">
+              <doc title="validate_xml" xml:lang="en" />
+            </param>
+            <param name="xml_data" style="query" type="xsd:string" default="">
+              <doc title="xml_data" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response5" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_get_next_numbers" path="/get_next_numbers/">
+      <method id="GetNextNumbers" name="POST">
+        <doc title="GetNextNumbers" xml:lang="en">Get Next Numbers</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="company_code" style="query" type="xsd:string" default="">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="counter_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="counter_code" xml:lang="en" />
+            </param>
+            <param name="count" style="query" type="xsd:integer" default="">
+              <doc title="count" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response6" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_get_status" path="/get_status/">
+      <method id="GetStatus" name="POST">
+        <doc title="GetStatus" xml:lang="en">Get Status</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="company_code" style="query" type="xsd:string" default="">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="entity" style="query" type="xsd:string" default="" required="true">
+              <doc title="entity" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="key" style="query" type="xsd:string" default="" required="true">
+              <doc title="key" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response7" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_assign_oblpn_to_load" path="/assign_oblpn_to_load/">
+      <method id="AssignOBLPNtoLoad" name="POST">
+        <doc title="AssignOBLPNtoLoad" xml:lang="en">Assign OBLPN to Load</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="carrier_code" style="query" type="xsd:string" default="">
+              <doc title="carrier_code" xml:lang="en" />
+            </param>
+            <param name="company_code" style="query" type="xsd:string" default="">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="delimiter" style="query" type="xsd:string" default="">
+              <doc title="delimiter" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="load_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="load_nbr" xml:lang="en" />
+            </param>
+            <param name="oblpn_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="oblpn_nbr" xml:lang="en" />
+            </param>
+            <param name="reassign_load_flg" style="query" type="xsd:boolean" default="">
+              <doc title="reassign_load_flg" xml:lang="en" />
+            </param>
+            <param name="require_specific_oblpn_status" style="query" type="xsd:integer" default="">
+              <doc title="require_specific_oblpn_status" xml:lang="en" />
+            </param>
+            <param name="trailer_nbr" style="query" type="xsd:string" default="">
+              <doc title="trailer_nbr" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response8" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_create_lpn" path="/create_lpn/">
+      <method id="CreateLPN" name="POST">
+        <doc title="CreateLPN" xml:lang="en">Create LPN</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="batch_number" style="query" type="xsd:string" default="">
+              <doc title="batch_number" xml:lang="en" />
+            </param>
+            <param name="company_code" style="query" type="xsd:string" default="">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="dest_facility_code" style="query" type="xsd:string" default="">
+              <doc title="dest_facility_code" xml:lang="en" />
+            </param>
+            <param name="drop_locn_barcode" style="query" type="xsd:string" default="">
+              <doc title="drop_locn_barcode" xml:lang="en" />
+            </param>
+            <param name="expiry_date" style="query" type="xsd:string" default="">
+              <doc title="expiry_date" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="item_alternate_code" style="query" type="xsd:string" default="">
+              <doc title="item_alternate_code" xml:lang="en" />
+            </param>
+            <param name="item_barcode" style="query" type="xsd:string" default="">
+              <doc title="item_barcode" xml:lang="en" />
+            </param>
+            <param name="lock_code" style="query" type="xsd:string" default="">
+              <doc title="lock_code" xml:lang="en" />
+            </param>
+            <param name="lpn_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="lpn_nbr" xml:lang="en" />
+            </param>
+            <param name="lpn_weight" style="query" type="xsd:double" default="">
+              <doc title="lpn_weight" xml:lang="en" />
+            </param>
+            <param name="order_type" style="query" type="xsd:string" default="">
+              <doc title="order_type" xml:lang="en" />
+            </param>
+            <param name="qty" style="query" type="xsd:integer" default="" required="true">
+              <doc title="qty" xml:lang="en" />
+            </param>
+            <param name="xdock_lpn_flg" style="query" type="xsd:boolean" default="">
+              <doc title="xdock_lpn_flg" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response9" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_receive_lpn" path="/receive_lpn/">
+      <method id="ReceiveLPN" name="POST">
+        <doc title="ReceiveLPN" xml:lang="en">Receive LPN</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="company_code" style="query" type="xsd:string" default="">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="lpn_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="lpn_nbr" xml:lang="en" />
+            </param>
+            <param name="rcvd_trailer_nbr" style="query" type="xsd:string" default="">
+              <doc title="rcvd_trailer_nbr" xml:lang="en" />
+            </param>
+            <param name="received_ts" style="query" type="xsd:string" default="">
+              <doc title="received_ts" xml:lang="en" />
+            </param>
+            <param name="receiving_location" style="query" type="xsd:string" default="">
+              <doc title="receiving_location" xml:lang="en" />
+            </param>
+            <param name="xdock_lpn_flg" style="query" type="xsd:boolean" default="">
+              <doc title="xdock_lpn_flg" xml:lang="en" />
+            </param>
+            <param name="xml_data" style="query" type="xsd:string" default="">
+              <doc title="xml_data" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response10" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_lock_unlock_lpn" path="/lock_unlock_lpn/">
+      <method id="LockUnlockLPN" name="POST">
+        <doc title="Lock/UnlockLPN" xml:lang="en">Lock/Unlock LPN</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="action" style="query" type="xsd:string" default="">
+              <doc title="action" xml:lang="en" />
+            </param>
+            <param name="company_code" style="query" type="xsd:string" default="">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="lock_code" style="query" type="xsd:string" default="">
+              <doc title="lock_code" xml:lang="en" />
+            </param>
+            <param name="lpn_nbr" style="query" type="xsd:string" default="">
+              <doc title="lpn_nbr" xml:lang="en" />
+            </param>
+            <param name="remove_lock_from_shipment_dtl_flg" style="query" type="xsd:boolean" default="">
+              <doc title="remove_lock_from_shipment_dtl_flg" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response11" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_update_output_interface" path="/update_output_interface/">
+      <method id="UpdateOutputInterface" name="POST">
+        <doc title="UpdateOutputInterface" xml:lang="en">Update Output Interface</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="company_code" style="query" type="xsd:string" default="">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="cust_intl_code" style="query" type="xsd:string" default="">
+              <doc title="cust_intl_code" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="filename" style="query" type="xsd:string" default="">
+              <doc title="filename" xml:lang="en" />
+            </param>
+            <param name="interface_type_code" style="query" type="xsd:string" default="">
+              <doc title="interface_type_code" xml:lang="en" />
+            </param>
+            <param name="message" style="query" type="xsd:string" default="">
+              <doc title="message" xml:lang="en" />
+            </param>
+            <param name="run_output_interface_flg" style="query" type="xsd:boolean" default="">
+              <doc title="run_output_interface_flg" xml:lang="en" />
+            </param>
+            <param name="status_id" style="query" type="xsd:integer" default="">
+              <doc title="status_id" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response12" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_induct_lpn" path="/induct_lpn/">
+      <method id="InductLPN" name="POST">
+        <doc title="InductLPN" xml:lang="en">Induct LPN</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="flat_data" style="query" type="xsd:string" default="">
+              <doc title="flat_data" xml:lang="en" />
+            </param>
+            <param name="xml_data" style="query" type="xsd:string" default="">
+              <doc title="xml_data" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response13" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_divert_confirm" path="/divert_confirm/">
+      <method id="DivertConfirm" name="POST">
+        <doc title="DivertConfirm" xml:lang="en">Divert Confirm</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="flat_data" style="query" type="xsd:string" default="">
+              <doc title="flat_data" xml:lang="en" />
+            </param>
+            <param name="xml_data" style="query" type="xsd:string" default="">
+              <doc title="xml_data" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response14" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_pick_confirm" path="/pick_confirm/">
+      <method id="PickConfirm" name="POST">
+        <doc title="PickConfirm" xml:lang="en">Pick Confirm</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="flat_data" style="query" type="xsd:string" default="">
+              <doc title="flat_data" xml:lang="en" />
+            </param>
+            <param name="xml_data" style="query" type="xsd:string" default="">
+              <doc title="xml_data" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response15" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_extended_propertyentity_namekeyextended_property" path="/extended_property/{entity_name}/{key}/{extended_property}">
+      <param name="entity_name" style="template" type="xsd:string" default="" required="true">
+        <doc title="entity_name" xml:lang="en" />
+      </param>
+      <param name="extended_property" style="template" type="xsd:string" default="" required="true">
+        <doc title="extended_property" xml:lang="en" />
+      </param>
+      <param name="key" style="template" type="xsd:string" default="" required="true">
+        <doc title="key" xml:lang="en" />
+      </param>
+      <method id="ExtendedProperty" name="GET">
+        <doc title="ExtendedProperty" xml:lang="en">Extended Property</doc>
+        <request>
+          <param name="company_code" style="query" type="xsd:string" default="">
+            <doc title="company_code" xml:lang="en" />
+          </param>
+          <param name="facility_code" style="query" type="xsd:string" default="">
+            <doc title="facility_code" xml:lang="en" />
+          </param>
+        </request>
+        <response status="200">
+          <representation element="schemas:response16" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_assign_and_load_oblpn" path="/assign_and_load_oblpn/">
+      <method id="AssignandLoadLPN" name="POST">
+        <doc title="AssignandLoadLPN" xml:lang="en">Assign and Load LPN</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="company_code" style="query" type="xsd:string" default="">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="dock_door_nbr" style="query" type="xsd:string" default="">
+              <doc title="dock_door_nbr" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="load_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="load_nbr" xml:lang="en" />
+            </param>
+            <param name="oblpn_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="oblpn_nbr" xml:lang="en" />
+            </param>
+            <param name="oblpn_weight" style="query" type="xsd:double" default="">
+              <doc title="oblpn_weight" xml:lang="en" />
+            </param>
+            <param name="pallet_nbr" style="query" type="xsd:string" default="">
+              <doc title="pallet_nbr" xml:lang="en" />
+            </param>
+            <param name="trailer_nbr" style="query" type="xsd:string" default="">
+              <doc title="trailer_nbr" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response17" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_entityentity_namekeysequence_number" path="/entity/{entity_name}/{key}/{sequence_number}/">
+      <param name="entity_name" style="template" type="xsd:string" default="" required="true">
+        <doc title="entity_name" xml:lang="en" />
+      </param>
+      <param name="key" style="template" type="xsd:string" default="" required="true">
+        <doc title="key" xml:lang="en" />
+      </param>
+      <param name="sequence_number" style="template" type="xsd:string" default="" required="true">
+        <doc title="sequence_number" xml:lang="en" />
+      </param>
+      <method id="EntityUpdate" name="PATCH">
+        <doc title="EntityUpdate" xml:lang="en">Entity Update</doc>
+        <request />
+        <response status="200">
+          <representation element="schemas:response18" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_entityentitykey" path="/entity/{entity}/{key}/">
+      <param name="entity" style="template" type="xsd:string" default="" required="true">
+        <doc title="entity" xml:lang="en" />
+      </param>
+      <param name="key" style="template" type="xsd:string" default="" required="true">
+        <doc title="key" xml:lang="en" />
+      </param>
+      <method id="ObjectInquiry" name="GET">
+        <doc title="ObjectInquiry" xml:lang="en">Object Inquiry</doc>
+        <request>
+          <param name="company_code" style="query" type="xsd:string" default="" required="true">
+            <doc title="company_code" xml:lang="en" />
+          </param>
+          <param name="facility_code" style="query" type="xsd:string" default="" required="true">
+            <doc title="facility_code" xml:lang="en" />
+          </param>
+          <param name="minimize" style="query" type="xsd:string" default="">
+            <doc title="minimize" xml:lang="en" />
+          </param>
+        </request>
+        <response status="200">
+          <representation element="schemas:response19" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_from_mhe_distribution_pack" path="/from_mhe_distribution_pack/">
+      <method id="FromMHEDistributionPack" name="POST">
+        <doc title="FromMHEDistributionPack" xml:lang="en">From MHE Distribution Pack</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="xml_data" style="query" type="xsd:string" default="">
+              <doc title="xml_data" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response20" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_from_mhe_distribution_short" path="/from_mhe_distribution_short/">
+      <method id="FromMHEDistributionShort" name="POST">
+        <doc title="FromMHEDistributionShort" xml:lang="en">From MHE Distribution Short</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="flat_data" style="query" type="xsd:string" default="">
+              <doc title="flat_data" xml:lang="en" />
+            </param>
+            <param name="xml_data" style="query" type="xsd:string" default="">
+              <doc title="xml_data" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response21" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_update_carrier_lpn_label" path="/update_carrier_lpn_label/">
+      <method id="UpdateCarrierLPNLabel" name="POST">
+        <doc title="UpdateCarrierLPNLabel" xml:lang="en">Update Carrier LPN Label</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="company_code" style="query" type="xsd:string" default="">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="label" style="query" type="xsd:string" default="" required="true">
+              <doc title="label" xml:lang="en" />
+            </param>
+            <param name="oblpn_nbr" style="query" type="xsd:string" default="" required="true">
+              <doc title="oblpn_nbr" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response22" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+    <resource id="_entityactive_inventorylocation_barcode" path="/entity/active_inventory/{location_barcode}/">
+      <param name="location_barcode" style="template" type="xsd:string" default="" required="true">
+        <doc title="location_barcode" xml:lang="en" />
+      </param>
+      <method id="UpdateActiveInventory" name="PATCH">
+        <doc title="UpdateActiveInventory" xml:lang="en">Update Active Inventory</doc>
+        <request>
+          <representation mediaType="application/x-www-form-urlencoded">
+            <param name="actual_qty" style="query" type="xsd:double" default="">
+              <doc title="actual_qty" xml:lang="en" />
+            </param>
+            <param name="adjustment_qty" style="query" type="xsd:double" default="">
+              <doc title="adjustment_qty" xml:lang="en" />
+            </param>
+            <param name="batch_number" style="query" type="xsd:string" default="">
+              <doc title="batch_number" xml:lang="en" />
+            </param>
+            <param name="company_code" style="query" type="xsd:string" default="">
+              <doc title="company_code" xml:lang="en" />
+            </param>
+            <param name="expiry_data" style="query" type="xsd:string" default="">
+              <doc title="expiry_data" xml:lang="en" />
+            </param>
+            <param name="facility_code" style="query" type="xsd:string" default="">
+              <doc title="facility_code" xml:lang="en" />
+            </param>
+            <param name="invn_attr_a" style="query" type="xsd:string" default="">
+              <doc title="invn_attr_a" xml:lang="en" />
+            </param>
+            <param name="invn_attr_b" style="query" type="xsd:string" default="">
+              <doc title="invn_attr_b" xml:lang="en" />
+            </param>
+            <param name="invn_attr_c" style="query" type="xsd:string" default="">
+              <doc title="invn_attr_c" xml:lang="en" />
+            </param>
+            <param name="invn_attr_d" style="query" type="xsd:string" default="">
+              <doc title="invn_attr_d" xml:lang="en" />
+            </param>
+            <param name="invn_attr_e" style="query" type="xsd:string" default="">
+              <doc title="invn_attr_e" xml:lang="en" />
+            </param>
+            <param name="invn_attr_f" style="query" type="xsd:string" default="">
+              <doc title="invn_attr_f" xml:lang="en" />
+            </param>
+            <param name="invn_attr_g" style="query" type="xsd:string" default="">
+              <doc title="invn_attr_g" xml:lang="en" />
+            </param>
+            <param name="item_alternate_code" style="query" type="xsd:string" default="">
+              <doc title="item_alternate_code" xml:lang="en" />
+            </param>
+            <param name="item_barcode" style="query" type="xsd:string" default="">
+              <doc title="item_barcode" xml:lang="en" />
+            </param>
+            <param name="item_code" style="query" type="xsd:string" default="">
+              <doc title="item_code" xml:lang="en" />
+            </param>
+            <param name="locn_capacity_check_flg" style="query" type="xsd:boolean" default="">
+              <doc title="locn_capacity_check_flg" xml:lang="en" />
+            </param>
+            <param name="reason_code" style="query" type="xsd:string" default="" required="true">
+              <doc title="reason_code" xml:lang="en" />
+            </param>
+          </representation>
+        </request>
+        <response status="200">
+          <representation element="schemas:response23" mediaType="application/xml" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>

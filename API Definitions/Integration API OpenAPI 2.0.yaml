@@ -1,0 +1,973 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Integration API
+  description: >-
+    This is a sample definition of the Oracle WMS Cloud Integration API.
+
+
+    The views expressed here are my own and do not necessarily reflect the views of Oracle.
+host: demo.wms.ocs.oraclecloud.com
+basePath: /demo_a9/wms/api
+schemes:
+- https
+consumes:
+- application/x-www-form-urlencoded
+produces:
+- application/xml
+security:
+- basic: []
+paths:
+  /run_stage_interface/:
+    post:
+      description: ''
+      summary: Run Stage Interface
+      operationId: RunStageInterface
+      parameters:
+      - name: async
+        in: formData
+        type: boolean
+        description: ''
+      - name: company_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: entity
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: file_group_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /update_oblpn_tracing_nbr/:
+    post:
+      description: ''
+      summary: Update OBLPN Tracking Number
+      operationId: UpdateOBLPNTrackingNumber
+      parameters:
+      - name: company_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: dry_ice_weight
+        in: formData
+        type: number
+        description: ''
+      - name: estimated_delivery_time
+        in: formData
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: master_tracking_nbr
+        in: formData
+        type: string
+        description: ''
+      - name: oblpn_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: rate
+        in: formData
+        type: string
+        description: ''
+      - name: ship_via_code
+        in: formData
+        type: string
+        description: ''
+      - name: tracking_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: weight
+        in: formData
+        type: number
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /run_mhe_stage_interface/:
+    post:
+      description: ''
+      summary: Run MHE Stage Interface
+      operationId: RunMHEStageInterface
+      parameters:
+      - name: company_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: entity
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: mhe_vendor_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: python_function
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /update_oblpn_dims/:
+    post:
+      description: ''
+      summary: Update OBLPN Dimensions
+      operationId: UpdateOBLPNDimensions
+      parameters:
+      - name: calc_vol_flg
+        in: formData
+        required: true
+        type: boolean
+        description: ''
+      - name: company_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: height
+        in: formData
+        required: true
+        type: number
+        description: ''
+      - name: length
+        in: formData
+        required: true
+        type: number
+        description: ''
+      - name: oblpn_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: ship_oblpn
+        in: formData
+        type: boolean
+        description: ''
+      - name: shipping_location
+        in: formData
+        type: string
+        description: ''
+      - name: volume
+        in: formData
+        type: number
+        description: ''
+      - name: weight
+        in: formData
+        type: number
+        description: ''
+      - name: width
+        in: formData
+        required: true
+        type: number
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /ship_oblpn:
+    post:
+      description: ''
+      summary: Ship OBLPN
+      operationId: ShipOBLPN
+      parameters:
+      - name: company_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: locn_barcode
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: oblpn_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: output_file_to_generate
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /init_stage_interface/:
+    post:
+      description: ''
+      summary: Init Stage Interface
+      operationId: InitStageInterface
+      parameters:
+      - name: async
+        in: formData
+        type: boolean
+        description: ''
+      - name: entity
+        in: formData
+        type: string
+        description: ''
+      - name: flat_data
+        in: formData
+        type: string
+        description: ''
+      - name: validate_xml
+        in: formData
+        type: boolean
+        description: ''
+      - name: xml_data
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /get_next_numbers/:
+    post:
+      description: ''
+      summary: Get Next Numbers
+      operationId: GetNextNumbers
+      parameters:
+      - name: company_code
+        in: formData
+        type: string
+        description: ''
+      - name: counter_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: count
+        in: formData
+        type: integer
+        description: ''
+      - name: facility_code
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /get_status/:
+    post:
+      description: ''
+      summary: Get Status
+      operationId: GetStatus
+      parameters:
+      - name: company_code
+        in: formData
+        type: string
+        description: ''
+      - name: entity
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        type: string
+        description: ''
+      - name: key
+        in: formData
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /assign_oblpn_to_load/:
+    post:
+      description: ''
+      summary: Assign OBLPN to Load
+      operationId: AssignOBLPNtoLoad
+      parameters:
+      - name: carrier_code
+        in: formData
+        type: string
+        description: ''
+      - name: company_code
+        in: formData
+        type: string
+        description: ''
+      - name: delimiter
+        in: formData
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        type: string
+        description: ''
+      - name: load_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: oblpn_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: reassign_load_flg
+        in: formData
+        type: boolean
+        description: ''
+      - name: require_specific_oblpn_status
+        in: formData
+        type: integer
+        description: ''
+      - name: trailer_nbr
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /create_lpn/:
+    post:
+      description: ''
+      summary: Create LPN
+      operationId: CreateLPN
+      parameters:
+      - name: batch_number
+        in: formData
+        type: string
+        description: ''
+      - name: company_code
+        in: formData
+        type: string
+        description: ''
+      - name: dest_facility_code
+        in: formData
+        type: string
+        description: ''
+      - name: drop_locn_barcode
+        in: formData
+        type: string
+        description: ''
+      - name: expiry_date
+        in: formData
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        type: string
+        description: ''
+      - name: item_alternate_code
+        in: formData
+        type: string
+        description: ''
+      - name: item_barcode
+        in: formData
+        type: string
+        description: ''
+      - name: lock_code
+        in: formData
+        type: string
+        description: ''
+      - name: lpn_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: lpn_weight
+        in: formData
+        type: number
+        description: ''
+      - name: order_type
+        in: formData
+        type: string
+        description: ''
+      - name: qty
+        in: formData
+        required: true
+        type: integer
+        description: ''
+      - name: xdock_lpn_flg
+        in: formData
+        type: boolean
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /receive_lpn/:
+    post:
+      description: ''
+      summary: Receive LPN
+      operationId: ReceiveLPN
+      parameters:
+      - name: company_code
+        in: formData
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        type: string
+        description: ''
+      - name: lpn_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: rcvd_trailer_nbr
+        in: formData
+        type: string
+        description: ''
+      - name: received_ts
+        in: formData
+        type: string
+        description: ''
+      - name: receiving_location
+        in: formData
+        type: string
+        description: ''
+      - name: xdock_lpn_flg
+        in: formData
+        type: boolean
+        description: ''
+      - name: xml_data
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /lock_unlock_lpn/:
+    post:
+      description: ''
+      summary: Lock/Unlock LPN
+      operationId: Lock/UnlockLPN
+      parameters:
+      - name: action
+        in: formData
+        type: string
+        description: ''
+      - name: company_code
+        in: formData
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        type: string
+        description: ''
+      - name: lock_code
+        in: formData
+        type: string
+        description: ''
+      - name: lpn_nbr
+        in: formData
+        type: string
+        description: ''
+      - name: remove_lock_from_shipment_dtl_flg
+        in: formData
+        type: boolean
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /update_output_interface/:
+    post:
+      description: ''
+      summary: Update Output Interface
+      operationId: UpdateOutputInterface
+      parameters:
+      - name: company_code
+        in: formData
+        type: string
+        description: ''
+      - name: cust_intl_code
+        in: formData
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        type: string
+        description: ''
+      - name: filename
+        in: formData
+        type: string
+        description: ''
+      - name: interface_type_code
+        in: formData
+        type: string
+        description: ''
+      - name: message
+        in: formData
+        type: string
+        description: ''
+      - name: run_output_interface_flg
+        in: formData
+        type: boolean
+        description: ''
+      - name: status_id
+        in: formData
+        type: integer
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /induct_lpn/:
+    post:
+      description: ''
+      summary: Induct LPN
+      operationId: InductLPN
+      parameters:
+      - name: flat_data
+        in: formData
+        type: string
+        description: ''
+      - name: xml_data
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /divert_confirm/:
+    post:
+      description: ''
+      summary: Divert Confirm
+      operationId: DivertConfirm
+      parameters:
+      - name: flat_data
+        in: formData
+        type: string
+        description: ''
+      - name: xml_data
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /pick_confirm/:
+    post:
+      description: ''
+      summary: Pick Confirm
+      operationId: PickConfirm
+      parameters:
+      - name: flat_data
+        in: formData
+        type: string
+        description: ''
+      - name: xml_data
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /extended_property/{entity_name}/{key}/{extended_property}/:
+    get:
+      description: ''
+      summary: Extended Property
+      operationId: ExtendedProperty
+      parameters:
+      - name: entity_name
+        in: path
+        required: true
+        type: string
+        description: ''
+      - name: extended_property
+        in: path
+        required: true
+        type: string
+        description: ''
+      - name: key
+        in: path
+        required: true
+        type: string
+        description: ''
+      - name: company_code
+        in: query
+        required: false
+        type: string
+        description: ''
+      - name: facility_code
+        in: query
+        required: false
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /assign_and_load_oblpn/:
+    post:
+      description: ''
+      summary: Assign and Load LPN
+      operationId: AssignandLoadLPN
+      parameters:
+      - name: company_code
+        in: formData
+        type: string
+        description: ''
+      - name: dock_door_nbr
+        in: formData
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        type: string
+        description: ''
+      - name: load_nbr
+        in: formData
+        description: ''
+        required: true
+        type: string
+      - name: oblpn_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: oblpn_weight
+        in: formData
+        type: number
+        description: ''
+      - name: pallet_nbr
+        in: formData
+        type: string
+        description: ''
+      - name: trailer_nbr
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /entity/{entity_name}/{key}/{sequence_number}/:
+    patch:
+      description: ''
+      summary: Entity Update
+      operationId: EntityUpdate
+      parameters:
+      - name: entity_name
+        in: path
+        required: true
+        type: string
+        description: ''
+      - name: key
+        in: path
+        required: true
+        type: string
+        description: ''
+      - name: sequence_number
+        in: path
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /entity/{entity}/{key}/:
+    get:
+      description: ''
+      summary: Object Inquiry
+      operationId: ObjectInquiry
+      parameters:
+      - name: entity
+        in: path
+        required: true
+        type: string
+        description: ''
+      - name: key
+        in: path
+        required: true
+        type: string
+        description: ''
+      - name: company_code
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: facility_code
+        in: query
+        required: true
+        type: string
+        description: ''
+      - name: minimize
+        in: query
+        required: false
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /from_mhe_distribution_pack/:
+    post:
+      description: ''
+      summary: From MHE Distribution Pack
+      operationId: FromMHEDistributionPack
+      parameters:
+      - name: xml_data
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /from_mhe_distribution_short/:
+    post:
+      description: ''
+      summary: From MHE Distribution Short
+      operationId: FromMHEDistributionShort
+      parameters:
+      - name: flat_data
+        in: formData
+        type: string
+        description: ''
+      - name: xml_data
+        in: formData
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /update_carrier_lpn_label/:
+    post:
+      description: ''
+      summary: Update Carrier LPN Label
+      operationId: UpdateCarrierLPNLabel
+      parameters:
+      - name: company_code
+        in: formData
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        type: string
+        description: ''
+      - name: label
+        in: formData
+        required: true
+        type: string
+        description: ''
+      - name: oblpn_nbr
+        in: formData
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+  /entity/active_inventory/{location_barcode}/:
+    patch:
+      description: ''
+      summary: Update Active Inventory
+      operationId: UpdateActiveInventory
+      parameters:
+      - name: location_barcode
+        in: path
+        type: string
+        required: true
+        description: ''
+      - name: actual_qty
+        in: formData
+        type: number
+        description: ''
+      - name: adjustment_qty
+        in: formData
+        type: number
+        description: ''
+      - name: batch_number
+        in: formData
+        type: string
+        description: ''
+      - name: company_code
+        in: formData
+        type: string
+        description: ''
+      - name: expiry_data
+        in: formData
+        type: string
+        description: ''
+      - name: facility_code
+        in: formData
+        type: string
+        description: ''
+      - name: invn_attr_a
+        in: formData
+        type: string
+        description: ''
+      - name: invn_attr_b
+        in: formData
+        type: string
+        description: ''
+      - name: invn_attr_c
+        in: formData
+        type: string
+        description: ''
+      - name: invn_attr_d
+        in: formData
+        type: string
+        description: ''
+      - name: invn_attr_e
+        in: formData
+        type: string
+        description: ''
+      - name: invn_attr_f
+        in: formData
+        type: string
+        description: ''
+      - name: invn_attr_g
+        in: formData
+        type: string
+        description: ''
+      - name: item_alternate_code
+        in: formData
+        type: string
+        description: ''
+      - name: item_barcode
+        in: formData
+        type: string
+        description: ''
+      - name: item_code
+        in: formData
+        type: string
+        description: ''
+      - name: locn_capacity_check_flg
+        in: formData
+        type: boolean
+        description: ''
+      - name: reason_code
+        in: formData
+        required: true
+        type: string
+        description: ''
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples:
+            application/xml: ''
+securityDefinitions:
+  basic:
+    type: basic

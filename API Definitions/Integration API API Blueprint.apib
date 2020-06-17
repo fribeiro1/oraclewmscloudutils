@@ -1,0 +1,686 @@
+FORMAT: 1A
+HOST: https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api
+
+# Integration API
+
+This is a sample definition of the Oracle WMS Cloud Integration API.
+
+The views expressed here are my own and do not necessarily reflect the views of Oracle.
+
+# Run Stage Interface [POST /run_stage_interface/]
+
++ Attributes
+
+    + async (boolean)
+
+    + company_code
+
+    + entity
+
+    + facility_code
+
+    + file_group_nbr
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Update OBLPN Tracking Number [POST /update_oblpn_tracing_nbr/]
+
++ Attributes
+
+    + company_code
+
+    + dry_ice_weight (number)
+
+    + estimated_delivery_time
+
+    + facility_code
+
+    + master_tracking_nbr
+
+    + oblpn_nbr
+
+    + rate
+
+    + ship_via_code
+
+    + tracking_nbr
+
+    + weight (number)
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Run MHE Stage Interface [POST /run_mhe_stage_interface/]
+
++ Attributes
+
+    + company_code
+
+    + entity
+
+    + facility_code
+
+    + mhe_vendor_code
+
+    + python_function
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Update OBLPN Dimensions [POST /update_oblpn_dims/]
+
++ Attributes
+
+    + calc_vol_flg (boolean)
+
+    + company_code
+
+    + facility_code
+
+    + height (number)
+
+    + length (number)
+
+    + oblpn_nbr
+
+    + ship_oblpn (boolean)
+
+    + shipping_location
+
+    + volume (number)
+
+    + weight (number)
+
+    + width (number)
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Ship OBLPN [POST /ship_oblpn]
+
++ Attributes
+
+    + company_code
+
+    + facility_code
+
+    + locn_barcode
+
+    + oblpn_nbr
+
+    + output_file_to_generate
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Init Stage Interface [POST /init_stage_interface/]
+
++ Attributes
+
+    + async (boolean)
+
+    + entity
+
+    + flat_data
+
+    + validate_xml (boolean)
+
+    + xml_data
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Get Next Numbers [POST /get_next_numbers/]
+
++ Attributes
+
+    + company_code
+
+    + counter_code
+
+    + count (number)
+
+    + facility_code
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Get Status [POST /get_status/]
+
++ Attributes
+
+    + company_code
+
+    + entity
+
+    + facility_code
+
+    + key
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Assign OBLPN to Load [POST /assign_oblpn_to_load/]
+
++ Attributes
+
+    + carrier_code
+
+    + company_code
+
+    + delimiter
+
+    + facility_code
+
+    + load_nbr
+
+    + oblpn_nbr
+
+    + reassign_load_flg (boolean)
+
+    + require_specific_oblpn_status (number)
+
+    + trailer_nbr
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Create LPN [POST /create_lpn/]
+
++ Attributes
+
+    + batch_number
+
+    + company_code
+
+    + dest_facility_code
+
+    + drop_locn_barcode
+
+    + expiry_date
+
+    + facility_code
+
+    + item_alternate_code
+
+    + item_barcode
+
+    + lock_code
+
+    + lpn_nbr
+
+    + lpn_weight (number)
+
+    + order_type
+
+    + qty (number)
+
+    + xdock_lpn_flg (boolean)
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Receive LPN [POST /receive_lpn/]
+
++ Attributes
+
+    + company_code
+
+    + facility_code
+
+    + lpn_nbr
+
+    + rcvd_trailer_nbr
+
+    + received_ts
+
+    + receiving_location
+
+    + xdock_lpn_flg (boolean)
+
+    + xml_data
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Lock/Unlock LPN [POST /lock_unlock_lpn/]
+
++ Attributes
+
+    + action
+
+    + company_code
+
+    + facility_code
+
+    + lock_code
+
+    + lpn_nbr
+
+    + remove_lock_from_shipment_dtl_flg (boolean)
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Update Output Interface [POST /update_output_interface/]
+
++ Attributes
+
+    + company_code
+
+    + cust_intl_code
+
+    + facility_code
+
+    + filename
+
+    + interface_type_code
+
+    + message
+
+    + run_output_interface_flg (boolean)
+
+    + status_id (number)
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Induct LPN [POST /induct_lpn/]
+
++ Attributes
+
+    + flat_data
+
+    + xml_data
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Divert Confirm [POST /divert_confirm/]
+
++ Attributes
+
+    + flat_data
+
+    + xml_data
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Pick Confirm [POST /pick_confirm/]
+
++ Attributes
+
+    + flat_data
+
+    + xml_data
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Extended Property [GET /extended_property/{entity_name}/{key}/{extended_property}{?company_code,facility_code}/]
+
++ Parameters
+
+    + entity_name
+
+    + extended_property
+
+    + key
+
+    + company_code (optional)
+
+    + facility_code (optional)
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 200
+
+    + Body
+
+            ``
+
+# Assign and Load LPN [POST /assign_and_load_oblpn/]
+
++ Attributes
+
+    + company_code
+
+    + dock_door_nbr
+
+    + facility_code
+
+    + load_nbr
+
+    + oblpn_nbr
+
+    + oblpn_weight (number)
+
+    + pallet_nbr
+
+    + trailer_nbr
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Entity Update [PATCH /entity/{entity_name}/{key}/{sequence_number}/]
+
++ Parameters
+
+    + entity_name
+
+    + key
+
+    + sequence_number
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 200
+
+    + Body
+
+            ``
+
+# Object Inquiry [GET /entity/{entity}/{key}{?company_code,facility_code,minimize}/]
+
++ Parameters
+
+    + entity
+
+    + key
+
+    + company_code
+
+    + facility_code
+
+    + minimize (optional)
+
+        + Default: `true`
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 200
+
+    + Body
+
+            ``
+
+# From MHE Distribution Pack [POST /from_mhe_distribution_pack/]
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# From MHE Distribution Short [POST /from_mhe_distribution_short/]
+
++ Attributes
+
+    + flat_data
+
+    + xml_data
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Update Carrier LPN Label [POST /update_carrier_lpn_label/]
+
++ Attributes
+
+    + company_code
+
+    + facility_code
+
+    + label
+
+    + oblpn_nbr
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``
+
+# Update Active Inventory [PATCH /entity/active_inventory/{location_barcode}/]
+
++ Attributes
+
+    + actual_qty (number)
+
+    + adjustment_qty (number)
+
+    + batch_number
+
+    + company_code
+
+    + expiry_date
+
+    + facility_code
+
+    + invn_attr_a
+
+    + invn_attr_b
+
+    + invn_attr_c
+
+    + invn_attr_d
+
+    + invn_attr_e
+
+    + invn_attr_f
+
+    + invn_attr_g
+
+    + item_alternate_code
+
+    + item_barcode
+
+    + item_code
+
+    + locn_capacity_check_flg (boolean)
+
+    + reason_code
+
++ Parameters
+
+    + location_barcode
+
++ Request (application/x-www-form-urlencoded)
+
+    + Headers
+
+            Authorization: ``
+
++ Response 201 (application/xml)
+
+    + Body
+
+            ``

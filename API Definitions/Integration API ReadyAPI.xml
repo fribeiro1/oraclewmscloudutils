@@ -1,0 +1,1640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="28f89a1b-5e50-457c-80fe-ded6c50bf7d3" created="3.2.7" activeEnvironment="Default environment" name="Integration API" updated="3.2.7 2020-05-27T19:48:04Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="f6b99998-51f0-4db8-b90f-09773ab38c07" name="Integration API" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" definitionUrl="file:/C:/Projetos/oraclewmscloudutils/API%20Definitions/Integration%20API%20OpenAPI%203.0.yaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:description>This is a sample definition of the Oracle WMS Cloud Integration API.
+
+The views expressed here are my own and do not necessarily reflect the views of Oracle.</con:description>
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="file:/C:/Projetos/oraclewmscloudutils/API%20Definitions/Integration%20API%20OpenAPI%203.0.yaml">
+      <con:part>
+        <con:url>file:/C:/Projetos/oraclewmscloudutils/API%20Definitions/Integration%20API%20OpenAPI%203.0.yaml</con:url>
+        <con:content>openapi: 3.0.0
+info:
+  version: "1.0"
+  title: Integration API
+  description: >-
+    This is a sample definition of the Oracle WMS Cloud Integration API.
+
+
+    The views expressed here are my own and do not necessarily reflect the views
+    of Oracle.
+security:
+  - basic: []
+paths:
+  /run_stage_interface/:
+    post:
+      description: ''
+      summary: Run Stage Interface
+      operationId: RunStageInterface
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                async:
+                  type: boolean
+                company_code:
+                  type: string
+                entity:
+                  type: string
+                facility_code:
+                  type: string
+                file_group_nbr:
+                  type: string
+              required:
+                - company_code
+                - entity
+                - facility_code
+                - file_group_nbr
+  /update_oblpn_tracing_nbr/:
+    post:
+      description: ''
+      summary: Update OBLPN Tracking Number
+      operationId: UpdateOBLPNTrackingNumber
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                company_code:
+                  type: string
+                dry_ice_weight:
+                  type: number
+                estimated_delivery_time:
+                  type: string
+                facility_code:
+                  type: string
+                master_tracking_nbr:
+                  type: string
+                oblpn_nbr:
+                  type: string
+                rate:
+                  type: string
+                ship_via_code:
+                  type: string
+                tracking_nbr:
+                  type: string
+                weight:
+                  type: number
+              required:
+                - company_code
+                - facility_code
+                - oblpn_nbr
+                - tracking_nbr
+  /run_mhe_stage_interface/:
+    post:
+      description: ''
+      summary: Run MHE Stage Interface
+      operationId: RunMHEStageInterface
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                company_code:
+                  type: string
+                entity:
+                  type: string
+                facility_code:
+                  type: string
+                mhe_vendor_code:
+                  type: string
+                python_function:
+                  type: string
+              required:
+                - company_code
+                - entity
+                - facility_code
+                - mhe_vendor_code
+  /update_oblpn_dims/:
+    post:
+      description: ''
+      summary: Update OBLPN Dimensions
+      operationId: UpdateOBLPNDimensions
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                calc_vol_flg:
+                  type: boolean
+                company_code:
+                  type: string
+                facility_code:
+                  type: string
+                height:
+                  type: number
+                length:
+                  type: number
+                oblpn_nbr:
+                  type: string
+                ship_oblpn:
+                  type: boolean
+                shipping_location:
+                  type: string
+                volume:
+                  type: number
+                weight:
+                  type: number
+                width:
+                  type: number
+              required:
+                - calc_vol_flg
+                - company_code
+                - facility_code
+                - height
+                - length
+                - oblpn_nbr
+                - width
+  /ship_oblpn:
+    post:
+      description: ''
+      summary: Ship OBLPN
+      operationId: ShipOBLPN
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                company_code:
+                  type: string
+                facility_code:
+                  type: string
+                locn_barcode:
+                  type: string
+                oblpn_nbr:
+                  type: string
+                output_file_to_generate:
+                  type: string
+              required:
+                - company_code
+                - facility_code
+                - locn_barcode
+                - oblpn_nbr
+  /init_stage_interface/:
+    post:
+      description: ''
+      summary: Init Stage Interface
+      operationId: InitStageInterface
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                async:
+                  type: boolean
+                entity:
+                  type: string
+                flat_data:
+                  type: string
+                validate_xml:
+                  type: boolean
+                xml_data:
+                  type: string
+  /get_next_numbers/:
+    post:
+      description: ''
+      summary: Get Next Numbers
+      operationId: GetNextNumbers
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                company_code:
+                  type: string
+                counter_code:
+                  type: string
+                count:
+                  type: integer
+                facility_code:
+                  type: string
+              required:
+                - counter_code
+  /get_status/:
+    post:
+      description: ''
+      summary: Get Status
+      operationId: GetStatus
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                company_code:
+                  type: string
+                entity:
+                  type: string
+                facility_code:
+                  type: string
+                key:
+                  type: string
+              required:
+                - entity
+                - key
+  /assign_oblpn_to_load/:
+    post:
+      description: ''
+      summary: Assign OBLPN to Load
+      operationId: AssignOBLPNtoLoad
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                carrier_code:
+                  type: string
+                company_code:
+                  type: string
+                delimiter:
+                  type: string
+                facility_code:
+                  type: string
+                load_nbr:
+                  type: string
+                oblpn_nbr:
+                  type: string
+                reassign_load_flg:
+                  type: boolean
+                require_specific_oblpn_status:
+                  type: integer
+                trailer_nbr:
+                  type: string
+              required:
+                - load_nbr
+                - oblpn_nbr
+  /create_lpn/:
+    post:
+      description: ''
+      summary: Create LPN
+      operationId: CreateLPN
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                batch_number:
+                  type: string
+                company_code:
+                  type: string
+                dest_facility_code:
+                  type: string
+                drop_locn_barcode:
+                  type: string
+                expiry_date:
+                  type: string
+                facility_code:
+                  type: string
+                item_alternate_code:
+                  type: string
+                item_barcode:
+                  type: string
+                lock_code:
+                  type: string
+                lpn_nbr:
+                  type: string
+                lpn_weight:
+                  type: number
+                order_type:
+                  type: string
+                qty:
+                  type: integer
+                xdock_lpn_flg:
+                  type: boolean
+              required:
+                - lpn_nbr
+                - qty
+  /receive_lpn/:
+    post:
+      description: ''
+      summary: Receive LPN
+      operationId: ReceiveLPN
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                company_code:
+                  type: string
+                facility_code:
+                  type: string
+                lpn_nbr:
+                  type: string
+                rcvd_trailer_nbr:
+                  type: string
+                received_ts:
+                  type: string
+                receiving_location:
+                  type: string
+                xdock_lpn_flg:
+                  type: boolean
+                xml_data:
+                  type: string
+              required:
+                - lpn_nbr
+  /lock_unlock_lpn/:
+    post:
+      description: ''
+      summary: Lock/Unlock LPN
+      operationId: Lock/UnlockLPN
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                action:
+                  type: string
+                company_code:
+                  type: string
+                facility_code:
+                  type: string
+                lock_code:
+                  type: string
+                lpn_nbr:
+                  type: string
+                remove_lock_from_shipment_dtl_flg:
+                  type: boolean
+  /update_output_interface/:
+    post:
+      description: ''
+      summary: Update Output Interface
+      operationId: UpdateOutputInterface
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                company_code:
+                  type: string
+                cust_intl_code:
+                  type: string
+                facility_code:
+                  type: string
+                filename:
+                  type: string
+                interface_type_code:
+                  type: string
+                message:
+                  type: string
+                run_output_interface_flg:
+                  type: boolean
+                status_id:
+                  type: integer
+  /induct_lpn/:
+    post:
+      description: ''
+      summary: Induct LPN
+      operationId: InductLPN
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                flat_data:
+                  type: string
+                xml_data:
+                  type: string
+  /divert_confirm/:
+    post:
+      description: ''
+      summary: Divert Confirm
+      operationId: DivertConfirm
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                flat_data:
+                  type: string
+                xml_data:
+                  type: string
+  /pick_confirm/:
+    post:
+      description: ''
+      summary: Pick Confirm
+      operationId: PickConfirm
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                flat_data:
+                  type: string
+                xml_data:
+                  type: string
+  /extended_property/{entity_name}/{key}/{extended_property}:
+    get:
+      description: ''
+      summary: Extended Property
+      operationId: ExtendedProperty
+      parameters:
+        - name: entity_name
+          in: path
+          required: true
+          description: ''
+          schema:
+            type: string
+        - name: extended_property
+          in: path
+          required: true
+          description: ''
+          schema:
+            type: string
+        - name: key
+          in: path
+          required: true
+          description: ''
+          schema:
+            type: string
+        - name: company_code
+          in: query
+          required: false
+          description: ''
+          schema:
+            type: string
+        - name: facility_code
+          in: query
+          required: false
+          description: ''
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+  /assign_and_load_oblpn/:
+    post:
+      description: ''
+      summary: Assign and Load LPN
+      operationId: AssignandLoadLPN
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                company_code:
+                  type: string
+                dock_door_nbr:
+                  type: string
+                facility_code:
+                  type: string
+                load_nbr:
+                  type: string
+                oblpn_nbr:
+                  type: string
+                oblpn_weight:
+                  type: number
+                pallet_nbr:
+                  type: string
+                trailer_nbr:
+                  type: string
+              required:
+                - load_nbr
+                - oblpn_nbr
+  '/entity/{entity_name}/{key}/{sequence_number}/':
+    patch:
+      description: ''
+      summary: Entity Update
+      operationId: EntityUpdate
+      parameters:
+        - name: entity_name
+          in: path
+          required: true
+          description: ''
+          schema:
+            type: string
+        - name: key
+          in: path
+          required: true
+          description: ''
+          schema:
+            type: string
+        - name: sequence_number
+          in: path
+          required: true
+          description: ''
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+  '/entity/{entity}/{key}/':
+    get:
+      description: ''
+      summary: Object Inquiry
+      operationId: ObjectInquiry
+      parameters:
+        - name: entity
+          in: path
+          required: true
+          description: ''
+          schema:
+            type: string
+        - name: key
+          in: path
+          required: true
+          description: ''
+          schema:
+            type: string
+        - name: company_code
+          in: query
+          required: true
+          description: ''
+          schema:
+            type: string
+        - name: facility_code
+          in: query
+          required: true
+          description: ''
+          schema:
+            type: string
+        - name: minimize
+          in: query
+          required: false
+          description: ''
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+  /from_mhe_distribution_pack/:
+    post:
+      description: ''
+      summary: From MHE Distribution Pack
+      operationId: FromMHEDistributionPack
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                xml_data:
+                  type: string
+  /from_mhe_distribution_short/:
+    post:
+      description: ''
+      summary: From MHE Distribution Short
+      operationId: FromMHEDistributionShort
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                flat_data:
+                  type: string
+                xml_data:
+                  type: string
+  /update_carrier_lpn_label/:
+    post:
+      description: ''
+      summary: Update Carrier LPN Label
+      operationId: UpdateCarrierLPNLabel
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                company_code:
+                  type: string
+                facility_code:
+                  type: string
+                label:
+                  type: string
+                oblpn_nbr:
+                  type: string
+              required:
+                - label
+                - oblpn_nbr
+  '/entity/active_inventory/{location_barcode}/':
+    patch:
+      description: ''
+      summary: Update Active Inventory
+      operationId: UpdateActiveInventory
+      parameters:
+        - name: location_barcode
+          in: path
+          required: true
+          description: ''
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/xml:
+              schema:
+                type: object
+              examples:
+                response:
+                  value: ''
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                actual_qty:
+                  type: number
+                adjustment_qty:
+                  type: number
+                batch_number:
+                  type: string
+                company_code:
+                  type: string
+                expiry_data:
+                  type: string
+                facility_code:
+                  type: string
+                invn_attr_a:
+                  type: string
+                invn_attr_b:
+                  type: string
+                invn_attr_c:
+                  type: string
+                invn_attr_d:
+                  type: string
+                invn_attr_e:
+                  type: string
+                invn_attr_f:
+                  type: string
+                invn_attr_g:
+                  type: string
+                item_alternate_code:
+                  type: string
+                item_barcode:
+                  type: string
+                item_code:
+                  type: string
+                locn_capacity_check_flg:
+                  type: boolean
+                reason_code:
+                  type: string
+              required:
+                - reason_code
+servers:
+  - url: 'https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api'
+components:
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+    </con:endpoints>
+    <con:resource name="/run_stage_interface/" path="/run_stage_interface/" id="e7c25777-5c3b-447b-aab7-ae540bf7abba">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="RunStageInterface" id="73398d0d-ccde-4e6e-b271-a0b4733cf004" method="POST">
+        <con:description>Run Stage Interface</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="7bf85276-82a9-40a6-b6a4-73f6f4f84394" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/update_oblpn_tracing_nbr/" path="/update_oblpn_tracing_nbr/" id="a9d3bd8a-a2c0-4a14-80a8-1f6907edf757">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="UpdateOBLPNTrackingNumber" id="da84b515-c12d-4680-a9da-b80936e073ca" method="POST">
+        <con:description>Update OBLPN Tracking Number</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="73e9cfb2-3d21-4122-a353-ad546f3e46ca" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/run_mhe_stage_interface/" path="/run_mhe_stage_interface/" id="6192f8e0-6e3d-4cae-8234-4fbaadedecc5">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="RunMHEStageInterface" id="4bb8e860-af3e-4180-a72f-2a750ed4b139" method="POST">
+        <con:description>Run MHE Stage Interface</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="a21741f6-3343-4a17-acca-4ac6b3fa7892" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/update_oblpn_dims/" path="/update_oblpn_dims/" id="465d2402-0f7e-4265-81b0-640beb8dc280">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="UpdateOBLPNDimensions" id="a8b31b56-2e1d-4378-94f7-1252af3a9564" method="POST">
+        <con:description>Update OBLPN Dimensions</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="046f6322-4bc4-4653-b28c-07bfda773ff1" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/ship_oblpn" path="/ship_oblpn" id="165a5151-7acb-4c09-8f7a-0bbd811b5547">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="ShipOBLPN" id="0536ad5f-1bb9-4ec8-9a48-1b3de35032e5" method="POST">
+        <con:description>Ship OBLPN</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="f91d182b-7bf0-49f6-aaae-69053e0576fd" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/init_stage_interface/" path="/init_stage_interface/" id="44429fea-0725-48c3-b7de-c2d6626c8afc">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="InitStageInterface" id="5e8a52c8-2361-463d-b0ba-30391ed8bc36" method="POST">
+        <con:description>Init Stage Interface</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="5387d381-d5ec-44fd-aa5e-303dd416cfdf" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/get_next_numbers/" path="/get_next_numbers/" id="bfbab82c-fdef-48a0-a3a2-72dec8296c55">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GetNextNumbers" id="ef8568be-57d2-48db-8008-eead245a942b" method="POST">
+        <con:description>Get Next Numbers</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="bffd808d-1129-4354-8f6b-bf9b23a7d077" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/get_status/" path="/get_status/" id="cac423da-fb69-462e-9e80-1aeef3ca1014">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="GetStatus" id="0aef8e8a-e429-4629-8dad-595595f8266b" method="POST">
+        <con:description>Get Status</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="092d8b1e-857a-4747-bd8c-7d464f2a81d6" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/assign_oblpn_to_load/" path="/assign_oblpn_to_load/" id="defb7b19-2562-424a-9da2-0a01b3271421">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="AssignOBLPNtoLoad" id="9315e98c-05a6-4600-a2ca-5241ad716bbb" method="POST">
+        <con:description>Assign OBLPN to Load</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="eb5e53c5-9d5c-402d-bbb9-3a59b13d1730" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/create_lpn/" path="/create_lpn/" id="af1d6f8e-5702-48e5-90da-6b4477972e0b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="CreateLPN" id="f9d08727-b6eb-483b-aeb8-b203c1b8cbe2" method="POST">
+        <con:description>Create LPN</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="6737aa03-3011-4df0-bdf0-02d689fb1417" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/receive_lpn/" path="/receive_lpn/" id="1be362eb-1f87-4962-a2b0-a850809465f7">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="ReceiveLPN" id="edff448b-47b8-44f1-b5f8-b1f31485ffa1" method="POST">
+        <con:description>Receive LPN</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="365aafc1-61dd-4c44-bcb0-b9716a7bc493" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/lock_unlock_lpn/" path="/lock_unlock_lpn/" id="f7bd99b7-2f01-49e8-b775-1e799a39b1e1">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Lock/UnlockLPN" id="1a4d2c04-f642-40ff-8a66-5dbfe2ef856a" method="POST">
+        <con:description>Lock/Unlock LPN</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="73e639a4-c0bd-4783-8917-4c7a2f5eb841" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/update_output_interface/" path="/update_output_interface/" id="e9be161c-3629-4415-966f-cf49170ba906">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="UpdateOutputInterface" id="0ca3b22c-decc-4b3c-aa7a-368dc3894cc7" method="POST">
+        <con:description>Update Output Interface</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="57d24b2f-a6ce-4bd9-8f03-563a138cece6" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/induct_lpn/" path="/induct_lpn/" id="a30ba224-9d5e-493e-b193-7d5d59982f3d">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="InductLPN" id="9a1c2dc5-c26e-4cce-99d6-f2465c9c73d9" method="POST">
+        <con:description>Induct LPN</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="42cee8a9-21e5-4fde-b75e-dcbdc9c14efe" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/divert_confirm/" path="/divert_confirm/" id="9cdcf2c7-b8b2-4211-9082-fa281a2c2390">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="DivertConfirm" id="406d271b-9136-46af-b9dd-525812b1b3db" method="POST">
+        <con:description>Divert Confirm</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="029660e4-d1b8-492e-aa5c-7eaa4e0eaae1" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/pick_confirm/" path="/pick_confirm/" id="eb856ad1-cae9-4f8b-9f0b-f1e8f10b738a">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="PickConfirm" id="46383edd-aac9-4e95-8d33-22db8494b673" method="POST">
+        <con:description>Pick Confirm</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="8d96583b-5f35-4f20-abbd-135c6834e20d" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/extended_property/{entity_name}/{key}/{extended_property}" path="/extended_property/{entity_name}/{key}/{extended_property}" id="30d27f88-1ad4-41e6-ba9e-44a6b896f033">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="ExtendedProperty" id="0967e223-dcd6-41d4-95ee-827e2b6675a9" method="GET">
+        <con:description>Extended Property</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>entity_name</con:name>
+            <con:style>TEMPLATE</con:style>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>extended_property</con:name>
+            <con:style>TEMPLATE</con:style>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>key</con:name>
+            <con:style>TEMPLATE</con:style>
+          </con:parameter>
+          <con:parameter>
+            <con:name>company_code</con:name>
+            <con:style>QUERY</con:style>
+          </con:parameter>
+          <con:parameter>
+            <con:name>facility_code</con:name>
+            <con:style>QUERY</con:style>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:request name="Request 1" id="9049cc87-e8d6-4dfe-a94e-ffc0b8705125" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/assign_and_load_oblpn/" path="/assign_and_load_oblpn/" id="16a3ed57-a399-4fa0-9dfd-dfe23702489d">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="AssignandLoadLPN" id="835f692c-386c-4db4-ae21-1541d23cc815" method="POST">
+        <con:description>Assign and Load LPN</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="03a60784-c692-432d-806f-1b921564e505" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/entity/{entity_name}/{key}/{sequence_number}/" path="/entity/{entity_name}/{key}/{sequence_number}/" id="d23ee678-d0c8-40e4-81b4-0d6fdd05f330">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="EntityUpdate" id="aa5d6b64-e83c-4cb6-89e8-039c11338068" method="PATCH">
+        <con:description>Entity Update</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>entity_name</con:name>
+            <con:style>TEMPLATE</con:style>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>key</con:name>
+            <con:style>TEMPLATE</con:style>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>sequence_number</con:name>
+            <con:style>TEMPLATE</con:style>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:request name="Request 1" id="773010d6-4510-4d72-9f55-fb6e263c0461" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/entity/{entity}/{key}/" path="/entity/{entity}/{key}/" id="8cc42833-dee7-4038-a974-c8f258f9785f">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="ObjectInquiry" id="27d8eea3-0cc5-45e3-b8cc-111b5f8ed43a" method="GET">
+        <con:description>Object Inquiry</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>entity</con:name>
+            <con:style>TEMPLATE</con:style>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>key</con:name>
+            <con:style>TEMPLATE</con:style>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>company_code</con:name>
+            <con:style>QUERY</con:style>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>facility_code</con:name>
+            <con:style>QUERY</con:style>
+          </con:parameter>
+          <con:parameter>
+            <con:name>minimize</con:name>
+            <con:style>QUERY</con:style>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:request name="Request 1" id="a383008f-779f-4b84-ae5d-f6fe2d07d4f2" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/from_mhe_distribution_pack/" path="/from_mhe_distribution_pack/" id="fe8cf203-85ee-4734-ade0-1393c1cbe492">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="FromMHEDistributionPack" id="c5e9695b-9b35-4940-a07f-2a2d9990ea59" method="POST">
+        <con:description>From MHE Distribution Pack</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="8f2faf61-dae8-424a-ac63-31171a99c814" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/from_mhe_distribution_short/" path="/from_mhe_distribution_short/" id="d4e81754-f053-49f0-a261-6d81f18c17a8">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="FromMHEDistributionShort" id="0503a405-d0c8-4659-8b36-a1dda45d3856" method="POST">
+        <con:description>From MHE Distribution Short</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="6087e797-2384-4333-a367-fb0f080bae24" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/update_carrier_lpn_label/" path="/update_carrier_lpn_label/" id="8fdb3151-a770-497b-b675-3cc5a49d490d">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="UpdateCarrierLPNLabel" id="19271c14-0569-40ed-998f-c130e6721a5c" method="POST">
+        <con:description>Update Carrier LPN Label</con:description>
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="3140e53a-7127-4c4c-ac63-c91362c44853" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="/entity/active_inventory/{location_barcode}/" path="/entity/active_inventory/{location_barcode}/" id="3f71378d-36e6-4216-a5b0-3ba6c03df524">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="UpdateActiveInventory" id="6f46e4d8-2152-48c5-a19b-bb173bc54e8b" method="PATCH">
+        <con:description>Update Active Inventory</con:description>
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>location_barcode</con:name>
+            <con:style>TEMPLATE</con:style>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:description/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+          <con:sampleContent/>
+        </con:representation>
+        <con:request name="Request 1" id="71518484-b23d-4b1d-b00b-7d019676fd8d" mediaType="application/x-www-form-urlencoded">
+          <con:settings/>
+          <con:endpoint>https://demo.wms.ocs.oraclecloud.com/demo_a9/wms/api</con:endpoint>
+          <con:request/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository>
+    <con:basicAuthEntry>
+      <con:name>basic BASIC</con:name>
+      <con:type>Basic</con:type>
+    </con:basicAuthEntry>
+  </con:authRepository>
+  <con:tags/>
+</con:soapui-project>
