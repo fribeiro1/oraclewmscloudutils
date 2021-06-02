@@ -45,16 +45,6 @@ The views expressed here are my own and do not necessarily reflect the views of 
 * [Python](https://github.com/fribeiro1/oraclewmscloudutils/tree/master/SDKs/integrationapi-pythonsdk)
 * [Ruby](https://github.com/fribeiro1/oraclewmscloudutils/tree/master/SDKs/integrationapi-rubyclient)
 
-## Oracle Integration Cloud Adapters (coming soon!)
-
-* REST API
-* Integration API
-
-## Oracle SOA Suite Adapters (coming soon!)
-
-* REST API
-* Integration API
-
 ## Known Issues
 
 * Missing parameters
